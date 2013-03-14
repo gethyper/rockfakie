@@ -1,0 +1,674 @@
+@import "reset.css";
+/* /////////////////////////////////////////////
+BASIC TYPOGRAPHY
+//////////////////////////////////////////// */
+
+.txt-micro{
+	font-size: 12px;
+}
+
+.txt-small,
+.headers,
+.list p{
+	font-size: 14px;
+}
+
+.txt-medium{
+	font-size: 18px !important;
+}
+
+.txt-large{
+	font-size: 22px;
+}
+
+/* /////////////////////////////////////////////
+BASIC COLORS
+//////////////////////////////////////////// */
+
+@bg:#e5e5e5;
+
+@holodark-txt: #3d3d3d;
+
+@light-blue: #33B5E5;
+
+@dark-blue: #0099CC;
+
+@light-purple:#AA66CC;
+
+@dark-purple: #AA66CC;
+
+@light-green: #99CC00;
+
+@dark-green: #669900;
+
+@light-yellow: #FFBB33;
+
+@dark-yellow: #FF8800;
+
+@light-red: #FF4444;
+
+@dark-red: #CC0000;
+
+@medium-grey-txt: #777;
+
+@holodark-ab-bg: #212121;
+
+@holodark-selected-blue:#002E3E;
+
+@holodark-tabs-bg: #333;
+
+@hololight-tabs-bg: #ddd;
+
+@headerTXT: #999;
+
+@button-grey: #999;
+
+@headerBorder: rgba(0,0,0,0.23);
+
+@pressed: rgba(51,181,229,.6);
+
+@btborder: rgba(51,181,229,.4);
+
+
+/* color: actionbars */
+
+.holodark.action-bar{
+	background: @holodark-ab-bg;
+	color: rgba(255,255,255,.6);
+}
+.holodark.action-bar.selected{
+	color: #fff;
+}
+.holodark-bg{
+	background: #111111;
+}
+.holodark.action-bar::after{
+	background: rgba(0,0,0,.2);
+}
+.holodark.action-bar::before{
+	background: rgba(255,255,255,.1);
+}
+
+.selected.holodark.action-bar{
+	background: @holodark-selected-blue;
+}
+.selected.holodark.action-bar::after{
+	background:@light-blue;
+}
+
+.hololight.action-bar{
+	background: #DDDDDD;
+}
+.hololight.bg{
+	background: #F2F2F2;
+}
+.hololight.action-bar.bottom::after{
+	background: #000;
+}
+.hololight.action-bar::after{
+	background: rgba(0,0,0,.05);
+}
+.hololight.action-bar::before{
+	background: rgba(0,0,0,.1);
+}
+
+.selected.hololight.action-bar{
+	background: #fff;
+}
+.selected.hololight.action-bar::after{
+	background:@light-blue;
+}
+
+
+/* color:tabs  */
+
+.holodark.tabs-full{
+	background: @holodark-tabs-bg;
+	color: #fff;
+}
+.hololight.tabs-full{
+	background: rgba(0,0,0,.1);
+}
+
+.tabs-full li::before{
+	background: #fff;
+}
+.tabs-full li.selected::after{
+	background: @light-blue;
+}
+
+.hololight-bg .button a{
+	color:#333;
+}
+.holodark-bg .button a{
+	color:#fff;
+}
+/* /////////////////////////////////////////////
+CSS
+//////////////////////////////////////////// */
+
+body{
+	font-family: "Roboto", sans-serif;
+	line-height: 120%;
+	color: @holodark-txt;
+	padding: 0;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	background:@bg;
+}
+.content{
+	overflow:scroll;
+	-webkit-scrolling-overflow:touch;
+	display:none;
+}
+.content.selected{
+	display:block;
+}
+.content .inner{
+	padding:16px;
+}
+.right{
+	float:right;
+}
+.left{
+	float:left;
+}
+/* /////////////////////////////////////////////
+ACTION BARS
+//////////////////////////////////////////// */
+
+.action-bar{
+	width: 100%;
+	position: relative;
+	height: 48px;
+	box-shadow: 0px 1px 5px rgba(0,0,0,.1);	
+}
+.action-bar::before{
+	content: "";
+	height: 1px;
+	width: 100%;
+	position: absolute;
+	
+}
+.action-bar::after{
+	content: "";
+	height: 2px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+.bottom{
+	position: fixed;
+	bottom: 0;
+	z-index:10000000000;
+}
+.bottom.action-bar.bottom::before{
+	display: none;
+}
+.bottom.action-bar.bottom::after{
+	top: 0 !important;
+}
+.action-bar .back{
+	width: 7px;
+	height: 14px;
+	position: absolute;
+	background: url(assets/holo-dark/actionbar-icon-back.png) no-repeat;
+	background-size:100%;
+	margin: 17px 0 0 3px;
+	display: none;
+}
+.action-bar .back.show{
+	display: block;
+}
+.action-bar .app-icon img{
+	width: 42px;
+	margin: 3px 8px;
+	float: left;
+}
+.action-bar h1{
+	float: left;
+	height: 25px;
+	line-height: 25px;
+	margin-top: 12px;
+}
+.action-icons{
+	padding-top: 8px;
+}
+.action-icons li{
+	float: right;
+	width: 32px;
+	height: 32px;
+	background-position: center center;
+	background-size:100%;
+	margin:0 12px;
+}
+.action-icons li.overflow{
+	background: url(assets/holo-dark/actionbar-icon-overflow.png) no-repeat;
+}
+.selected.holodark-action-bar::after{
+	height: 3px;
+}
+.selected.action-bar .back,
+.selected.action-bar .app-icon{
+	display: none;
+}
+.done{
+	display: block;
+	position: relative;
+	background: url(assets/holo-dark/actionbar-icon-checkmark.png);
+	background-size:100%;
+	height: 32px;
+	width: 32px;
+	margin: 8px 12px;
+	float: left;
+	display: none;
+	
+}
+.done::after{
+	content: "";
+	height: 24px;
+	width: 1px;
+	background: #fff;
+	position: absolute;
+	right: -12px;
+	top: 4px;
+	opacity: .1;
+}
+.selected.action-bar .done{
+	display: block;
+}
+.selected.action-bar h1{
+	margin-left: 12px;
+}
+
+/* /////////////////////////////////////////////
+ACTION BARS
+//////////////////////////////////////////// */
+
+.tabs-full{
+	text-transform: uppercase;
+	font-size: 12px;
+	width: 100%;
+	height: 48px;
+}
+.tabs-full li{
+	height: 48px;
+	line-height: 48px;
+	float: left;
+	display: block;
+	position: relative;
+	text-align: center;
+	font-weight: bold;
+	width:33.33333%
+}
+.tabs-full li::before{
+	content: "";
+	width: 1px;
+	height: 24px;
+	position: absolute;
+	top: 12px;
+	opacity: .1;
+	left:0;
+}
+.tabs-full li:first-child::before{
+	display: none;
+}
+.tabs-full li.selected::after{
+	content: "";
+	height: 6px;
+	width: 100%;
+	background: @light-blue;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+/* /////////////////////////////////////////////
+TYPOGRAPHY
+//////////////////////////////////////////// */
+.content h1.xxl{
+	font-size:32px;
+	line-height:120%;
+	font-weight:lighter;
+	padding:0 0 12px 0;
+}
+.content h1{
+	font-size:24px;
+	line-height:120%;
+	font-weight:lighter;
+	padding:0 0 12px 0;
+}
+.content h2{
+	font-size:20px;
+	line-height:120%;
+	padding:0 0 12px 0;
+}
+.content h4{
+	font-size:18px;
+	line-height:120%;
+	padding:0 0 12px 0;
+}
+.content .light{
+	font-weight:lighter;
+}
+.content .condensed{
+	font-family:"Roboto-Condensed";
+}
+.content .small{
+	font-size:12px;
+}
+.content span.aux{
+	opacity:.6;
+}
+.content p{
+	padding:0 0 8px 0;
+}	
+/* /////////////////////////////////////////////
+LISTS
+//////////////////////////////////////////// */
+
+h3{
+	text-transform:uppercase;
+	padding:6px;
+	border-bottom: 2px solid @headerBorder;
+	color:@headerTXT;
+	font-weight:bold;
+}
+.list{
+	margin-bottom:22px;
+}
+p.list{
+	padding: 12px 6px;
+}
+.list li{
+	padding: 12px 6px;
+	clear:both;
+	position:relative;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	min-height:24px;
+	font-size:18px;
+	padding-right:60px;
+	-wekbit-transform:translate3d(0,0,0) !important;
+}
+.list li.two{
+	min-height:40px;
+	padding-right:72px;
+}
+.list li.three{
+	min-height:58px;
+	padding-right:72px;
+}
+.list li:active{
+	background: @pressed;
+}
+.list li.full{
+	padding-right:0;
+}
+.list li div{
+	float:right;
+	display:block;
+	height:48px;
+	width:48px;
+	position:absolute;
+	right:0;
+	top:0;
+	text-align:right;
+}
+.list li div:hover{
+	background: @pressed;
+}
+.list li div.ico{
+	width:38px;
+	height:48px;
+	paddign-left:12px;
+	
+}
+.list li div.ico::after{
+	content:"";
+	position:absolute;
+	height:24px;
+	width:1px;
+	background:rgba(0,0,0,.1);
+	left:0;
+	top:12px;
+}
+.list li div.ico img{
+	width:32px;
+	margin:8px 0 0 0;
+}
+.list li div.avatar img{
+	width:100%;
+}
+.list li.two div.ico{
+	padding: 10px 0;
+}
+.list li.two div.ico::after{
+	top: 22px;
+}
+.list li.two div.avatar{
+	width:64px;
+	height:64px;
+}
+.list li.three div.ico{
+	padding: 17px 0
+}
+.list li.three div.ico::after{
+	top: 29px;
+}
+.list li.three div.avatar{
+	width:64px;
+	height:64px;
+	margin-top:8px;
+}
+.three .avatar img{
+	
+}
+.list li p{
+	color:@medium-grey-txt;
+}
+/* /////////////////////////////////////////////
+BUTTONS
+//////////////////////////////////////////// */
+.button{
+	padding:4px;
+}
+.button a{
+	display:block;
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	text-decoration:none;
+	background: @button-grey;
+	box-shadow:inset 0 1px 0 rgba(255,255,255,3), inset 0 -1px 0 rgba(0,0,0,0.2), 0 1px 1px rgba(0,0,0,.25);
+}
+.button a:hover{
+	background: @light-blue;
+}
+.button a:active{
+	background: @light-blue;
+	outline:3px solid @btborder;
+}
+
+/* /////////////////////////////////////////////
+FORMS
+//////////////////////////////////////////// */
+.content input[type=text]{
+	-webkit-appearance: none;
+	border:none;
+	background:url(assets/universal/text-field-border.png) no-repeat left bottom, url(assets/universal/text-field-border.png) no-repeat right bottom;
+	background-size:1px;
+	font-size:18px;
+	font-family:"Roboto";
+	color:@holodark-txt;
+	line-height:30px;
+	border-bottom:1px solid rgba(0,0,0,.15);
+	position:relative;
+	outline:none;
+	padding: 0 2%;
+	display:block;
+	width:96%;
+	margin: 8px 0 16px 0;
+}
+.content input[type=text]:before,
+.content input[type=text]:after{
+	content:"";
+	height:4px;
+	width:1px;
+	position:absolute;
+	background: rgba(0,0,0,.15);
+	left:0;
+	bottom:0;
+}
+.content input[type=text]:focus{
+	border-color:@dark-blue;
+	background:url(assets/universal/text-field-border-focus.png) no-repeat left bottom, url(assets/universal/text-field-border-focus.png) no-repeat right bottom;
+}
+.content input[type=text]:focus:before,
+.content input[type=text]:focus:after{
+	background: @dark-blue; 
+}
+.content input[type=text]:after{
+	right:0 !important;
+	left: auto;
+}
+.content input[type=checkbox]{
+	-webkit-appearance: none;
+	width:16px;
+	height:16px;
+	border:1px solid rgba(0,0,0,.8);
+	position:relative;
+	margin:3px 8px;
+}
+.content input[type=checkbox]:active{
+	box-shadow: 0 0 0 1px @bg, 0 0 0 2px @light-blue;
+}
+.content input[type=checkbox]:checked{
+	box-shadow: 0 0 0 1px @bg;
+}
+.content input[type=checkbox]:checked:after{
+	content:"";
+	position:absolute;
+	background:url(assets/universal/checkbox-icon.png) left top;
+	background-size:100%;
+	width:28px;
+	height:28px;
+	top:-7px;
+	left:-4px;
+}
+.content input[type=radio]{
+	-webkit-appearance: none;
+	width:16px;
+	height:16px;
+	border:1px solid rgba(0,0,0,.8);
+	position:relative;
+	border-radius:100px;
+	margin:3px 8px;
+}
+.content input[type=radio]:active{
+	box-shadow: 0 0 0 1px @bg, 0 0 0 2px @light-blue;
+}
+.content input[type=radio]:checked{
+	background: url(assets/universal/radio-icon.png) center center;
+	background-size:23px;
+	
+}
+.content select{
+	-webkit-appearance: none;
+	background: none;
+	border-radius:0;
+	border:none;
+	border-bottom:1px solid rgba(0,0,0,.15);
+	padding:8px 32px 8px 8px;
+	font-size:18px;
+	font-family:"Roboto";
+	color:@holodark-txt;
+	outline:none;
+	position:relative;
+	background:url(assets/universal/select-icon.png) right bottom no-repeat;
+	background-size:12px;
+}
+.toggle{
+	display:block;
+	height:24px;
+	line-height:24px;
+	width:97px;
+	background:#bebebe;
+	font-size:14px;
+	position:relative;
+	padding:2px 2px 0 2px;
+	margin:0 8px;
+	-webkit-transition: float .3s ease-in-out;
+}
+.toggle span.off, .toggle span.on{
+	display:block;
+	height:21px;
+	line-height:21px;
+	width:50%;
+	text-align:center;
+	text-decoration:none;
+	background: @button-grey;
+	box-shadow: 0 -1px 0 rgba(255,255,255,.4),0 1px 0 rgba(0,0,0,0.2), 0 1px 1px rgba(0,0,0,.25);
+	color:#fff
+}
+.toggle span.on{
+	float:right;
+	background:@light-blue;
+}
+/* /////////////////////////////////////////////
+CARDS
+//////////////////////////////////////////// */
+
+.card{
+	background:#fff;
+	margin:12px 0 0 0;
+	border-radius:3px;
+	box-shadow: 0 2px 1px 1px rgba(0,0,0,.15);
+	padding:16px;
+	font-weight:lighter;
+	-webkit-transform: translate3d(0,0,0);
+	position:relative;
+}
+.card .pic{
+	margin:-16px -16px 8px -16px;
+	overflow:hidden;
+	position:relative;
+}
+.card .pic img{
+	width:100%;
+	position:relative;
+}
+.card .cta{
+	display:block;
+	color:@light-blue;
+	margin: 0px -8px -16px -8px;
+	border-top:1px solid rgba(0,0,0,.10);
+	padding: 0 8px;
+	height:40px;
+	line-height:40px;
+	clear:both;
+	font-size:14px;
+	font-weight:normal;
+
+}
+.card h1{
+	padding-bottom:6px !important;
+}
+.card.half .pic,
+.card.half .info{
+	width:50%;
+}
+.card.half .pic{
+	margin-bottom:-4px !important;
+}
+
+.card.third .pic{
+	width:33%;
+	height:120px;
+}
+.card.third .pic img{
+	height:100%;
+	width:auto;
+	margin-left:-33%;
+}
+.card.third .pic{
+	margin-bottom:0px !important;
+}

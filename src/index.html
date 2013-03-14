@@ -1,0 +1,439 @@
+<!doctype html>
+<html>
+	<head>
+	<title>Rapid Android Prototyping - Android Stencils</title>
+	<meta charset="utf8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<link rel="stylesheet/less" type="text/css" href="styles.less">
+	<script src="js/jquery.min.js" type="text/javascript"></script>
+	<script src="js/google.fastbutton.js" type="text/javascript"></script>
+	<script src="js/jquery.google.fastbutton.js" type="text/javascript"></script>
+	<script src="js/jquery.iosslider.min.js" type="text/javascript"></script>
+	<script src="js/jquery.transit.js" type="text/javascript"></script>
+	<script src="js/script.js" type="text/javascript"></script>
+	<script src="less.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	  less.watch();
+	  
+	</script>
+	</head>
+	<body class="hololight-bg">
+<div id="home" class="activity hastabs selected">
+      <header class="action-bar hololight">
+    <div class="button done"></div>
+    <div class="show button back opennav"></div>
+    <div class="app-icon"><img src="assets/universal/app-icon.png" /></div>
+    <h1 class="txt-medium">RAP</h1>
+    <ul class="action-icons">
+          <li class="overflow link" data-load="#example "></li>
+        </ul>
+  </header>
+      <ul class="tabs-full hololight">
+    <li class="col2 selected" data-load="#tab1">About</li>
+    <li class="col2"  data-load="#tab2">Features</li>
+  </ul>
+      <div class="slides">
+    <div class="slider">
+          <section id="tab1" class="slide content">
+        <div class="inner">
+              <div class="img" style="background: url(assets/universal/fap-bg.png) no-repeat #333; margin: -16px -16px 16px -17px; background-size: cover ; height: 300px;"> </div>
+              <div class="card" style="margin-top: -50px;">
+            <h1 class="xxl">Android prototypes in minutes!</h1>
+            <p class="light">Rapid Android Prototyping was created for super fast and easy Android prototyping. It's based on the Android Styleguide to help you create fully functional prototypes in minutes.</p>
+          </div>
+              <br/>
+            </div>
+      </section>
+          <section id="tab2" class="slide content">
+        <div class="inner">
+              <h1>Easy to use</h1>
+              <p class="light">Rapid Android Prototyping allows us to create Android prototypes using basic HTML, CSS (LESS) and JavaScript. Everything is done in one single HTML file that can be easily host anywhere.</p>
+              <p>You can pretty much copy and paste snippets.</p>
+              <br/>
+              <h1>Native Look</h1>
+              <p class="light">Rapid Android Prototyping is based of the Android Style guide, that means all components have the native Android look and feel. That doesn't mean you cannot extend it. We use CSS variables that allow you to change the basic theme colors and of course you can create your own style with CSS.</p>
+              <br/>
+              <h1>Nice animations</h1>
+              <p class="light">With CSS3 it's possible to create smooth animations for mobile devices. Rapid Android Prototypinghas 4 types of transitions: Normal, ZOOM, Slide and Slide 3D. </p>
+              <p class="light">You can also create your own transitions using Javascript and CSS3</p>
+            </div>
+      </section>
+        </div>
+  </div>
+    </div>
+<div id="typography" class="activity">
+      <header class="action-bar hololight">
+    <div class="button done"></div>
+    <div class="button back show opennav"></div>
+    <div class="app-icon"><img src="assets/universal/app-icon.png" /></div>
+    <h1 class="txt-medium">Typography</h1>
+    <ul class="action-icons">
+          <li class="overflow"></li>
+        </ul>
+  </header>
+      <div class="content">
+    <div class="inner">
+          <h3 class="headers">Text Styles</h3>
+          <ul class="list">
+        <li>
+              <h1 class="xxl">XX-Large Titles - Light 32sp</h1>
+              <h1>X-Large Titles  - Light 24sp</h1>
+              <h2>Large Titles  - Light 20sp</h2>
+              <h4>Medium Titles  - Light 18sp</h4>
+              <h4 class="condensed">Medium Titles Condensed 18sp </h4>
+              <p>Body Regular - 14sp</p>
+              <p class="condensed">Body Condensed - 14sp </p>
+              <p class="light">Body Regular - 14sp</p>
+              <p class="small">Small - 12sp </p>
+              <p><span class="aux">Aux Regular - 14sp</span></p>
+              <p><span class="aux condensed">Aux Condensed - 14sp </span></p>
+              <p><span class="aux light">Aux Regular - 14sp</span></p>
+              <p><span class="aux">Aux Small - 14sp</span></p>
+            </li>
+      </ul>
+        </div>
+  </div>
+    </div>
+<div id="forms" class="activity">
+      <header class="action-bar hololight">
+    <div class="button done"></div>
+    <div class="button back show opennav"></div>
+    <div class="app-icon"><img src="assets/universal/app-icon.png" /></div>
+    <h1 class="txt-medium">Forms, Buttons</h1>
+    <ul class="action-icons">
+          <li class="overflow"></li>
+        </ul>
+  </header>
+      <div class="content">
+    <div class="inner">
+          <h3 class="headers">Text Field</h3>
+          <p class="list">
+        <input type="text" name="" value="" />
+        <select>
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+      </p>
+          <h3 class="headers">Checkbox, Radio Buttons & Toggle</h3>
+          <ul class="list">
+        <li class="full">Checkbox
+              <input type="checkbox" name="" value="" class="right" checked="checked"/>
+              <input type="checkbox" name="" value="" class="right"/>
+            </li>
+        <li class="full">Radio
+              <input type="radio" name="options" value="" class="right" checked="checked"/>
+              <input type="radio" name="options" value="" class="right" />
+            </li>
+        <li class="full">Toggle <span class="toggle right"><span class="off">Off</span></span> <span class="toggle right"><span class="on">On</span></span> </li>
+      </ul>
+          <h3 class="headers">Sliders</h3>
+          <input class="slide" type="range" min="0" max="100" value="50" />
+          <div class="button full"> <a>Button</a> </div>
+        </div>
+  </div>
+    </div>
+<div id="loaders" class="activity">
+      <header class="action-bar hololight">
+    <div class="button done"></div>
+    <div class="button back show opennav"></div>
+    <div class="app-icon"><img src="assets/universal/app-icon.png" /></div>
+    <h1 class="txt-medium">Loaders & Progress bars</h1>
+    <ul class="action-icons">
+          <li class="overflow"></li>
+        </ul>
+  </header>
+      <div class="content">
+    <div class="inner">
+          <h3 class="headers">Spinners</h3>
+          <div class="spinner large"></div>
+          <div class="spinner medium"></div>
+          <div class="spinner small"></div>
+          <div class="spinner micro"></div>
+          <h3 class="headers">Infinite Horizontal Loading</h3>
+          <div class="hload"></div>
+          <h3 class="headers">Percentage Horizontal Loading</h3>
+          <div class="pload"></div>
+        </div>
+  </div>
+    </div>
+<div id="cards" class="activity">
+      <header class="action-bar hololight">
+    <div class="button done"></div>
+    <div class="button back show opennav"></div>
+    <div class="app-icon"><img src="assets/universal/app-icon.png" /></div>
+    <h1 class="txt-medium">Cards</h1>
+    <ul class="action-icons">
+          <li class="overflow"></li>
+        </ul>
+  </header>
+      <div class="content">
+    <div class="inner">
+          <h3 class="headers">Example of Cards</h3>
+          <div class="card imgtop">
+        <div class="pic"> <img src="assets/universal/pic.png" /> </div>
+        <div class="info">
+              <h1>Jennifer Clark Skincare</h1>
+              <p>52% off at Jennifer Clark Skincare</p>
+            </div>
+        <a class="cta">View online</a> </div>
+          <div class="card half">
+        <div class="pic right"> <img src="assets/universal/pic.png" /> </div>
+        <div class="info left">
+              <h1>Jennifer Clark Skincare</h1>
+              <p>52% off at Jennifer Clark Skincare</p>
+            </div>
+        <a class="cta">View online</a> </div>
+          <div class="card half">
+        <div class="pic left"> <img src="assets/universal/pic.png" /> </div>
+        <div class="info right">
+              <h1>Jennifer Clark Skincare</h1>
+              <p>52% off at Jennifer Clark Skincare</p>
+            </div>
+        <a class="cta">View online</a> </div>
+          <div class="card third">
+        <div class="pic right"> <img src="assets/universal/pic.png" /> </div>
+        <div class="info left">
+              <h1>Jennifer Clark Skincare</h1>
+              <p>52% off at Jennifer Clark Skincare</p>
+            </div>
+        <a class="cta">View online</a> </div>
+          <div class="card third">
+        <div class="pic left"> <img src="assets/universal/pic.png" /> </div>
+        <div class="info right">
+              <h1>Jennifer Clark Skincare</h1>
+              <p>52% off at Jennifer Clark Skincare</p>
+            </div>
+        <a class="cta">View online</a> </div>
+        </div>
+  </div>
+    </div>
+<div id="transitions" class="activity">
+      <header class="action-bar hololight">
+    <div class="button done"></div>
+    <div class="button back show opennav"></div>
+    <div class="app-icon"><img src="assets/universal/app-icon.png" /></div>
+    <h1 class="txt-medium">Transitions</h1>
+    <ul class="action-icons">
+          <li class="overflow"></li>
+        </ul>
+  </header>
+      <div class="content">
+    <div class="inner">
+          <h3 class="headers">Examples of transitions</h3>
+          <ul class="list">
+        <li class="link" data-load="#example"><a>Dry</a></li>
+        <li class="link zoom" data-load="#example1"><a>Zoom</a></li>
+        <li class="link slide" data-load="#example2"><a>Slide</a></li>
+        <li class="link slide3d" data-load="#example3"><a>Slide 3D</a></li>
+      </ul>
+        </div>
+  </div>
+    </div>
+<div id="popups" class="activity">
+      <header class="action-bar hololight">
+    <div class="button done"></div>
+    <div class="button back show opennav"></div>
+    <div class="app-icon"><img src="assets/universal/app-icon.png" /></div>
+    <h1 class="txt-medium">Popups and Coachmarks</h1>
+    <ul class="action-icons">
+          <li class="overflow"></li>
+        </ul>
+  </header>
+      <div class="content">
+    <div class="inner">
+          <h3 class="headers">Popups</h3>
+          <ul class="list">
+        <li class="openpop" data-load="#pop1"><a>Holo Light</a></li>
+        <li class="openpop" data-load="#pop2"><a>Holo Dark</a></li>
+      </ul>
+          <h3 class="headers">Coachmark</h3>
+          <ul class="list">
+        <li class="opencoach" data-load="#coach1"><a>Teach me something</a></li>
+      </ul>
+        </div>
+  </div>
+    </div>
+<div id="lists" class="activity">
+      <header class="action-bar hololight">
+    <div class="button done"></div>
+    <div class="button back show opennav"></div>
+    <div class="app-icon"><img src="assets/universal/app-icon.png" /></div>
+    <h1 class="txt-medium">List styles</h1>
+    <ul class="action-icons">
+          <li class="overflow"></li>
+        </ul>
+  </header>
+      <div class="content">
+    <div class="inner">
+          <h3 class="headers">Section Header</h3>
+          <ul class="list">
+        <li class="one full">Single line item</li>
+        <li class="one">Single line item with button
+              <div class="ico"><img src="assets/holo-dark/ico-contact.png"/></div>
+            </li>
+        <li class="one">Single line item with avatar
+              <div class="avatar"><img src="assets/holo-dark/avatar.png"/></div>
+            </li>
+      </ul>
+          <h3 class="headers">Two lines</h3>
+          <ul class="list">
+        <li class="two full"> Lorem ipsum dolor sit amet
+              <p class="text-medium">secondary line item</p>
+            </li>
+        <li class="two"> Lorem ipsum dolor sit amet
+              <p>secondary line item</p>
+              <div class="ico"><img src="assets/holo-dark/ico-contact.png"/></div>
+            </li>
+        <li class="two"> Lorem ipsum dolor sit amet
+              <p>secondary line item</p>
+              <div class="avatar"><img src="assets/holo-dark/avatar.png"/></div>
+            </li>
+      </ul>
+          <h3 class="headers">Three lines</h3>
+          <ul class="list">
+        <li class="three full"> Lorem ipsum dolor sit amet
+              <p>Dapibus, neque id cursus faucibus, tortor 
+            neque egestas</p>
+            </li>
+        <li class="three"> Lorem ipsum dolor sit amet
+              <p>Dapibus, neque id cursus faucibus, tortor 
+            neque egestas</p>
+              <div class="ico"><img src="assets/holo-dark/ico-contact.png"/></div>
+            </li>
+        <li class="three"> Lorem ipsum dolor sit amet
+              <p>Dapibus, neque id cursus faucibus, tortor 
+            neque egestas</p>
+              <div class="avatar"><img src="assets/holo-dark/avatar.png"/></div>
+            </li>
+      </ul>
+        </div>
+  </div>
+    </div>
+<div id="example" class="activity">
+      <header class="action-bar hololight">
+    <div class="button done"></div>
+    <div class="button back show link" data-load="#transitions"></div>
+    <div class="app-icon"><img src="assets/universal/app-icon.png" /></div>
+    <h1 class="txt-medium">Title of the screen</h1>
+    <ul class="action-icons">
+          <li class="overflow"></li>
+        </ul>
+  </header>
+      <div class="content">
+    <div class="inner">
+          <div class="pic full-bleed-right full-bleed-top full-bleed-left"> <img src="http://sitesmacker.com/wp-content/uploads/2012/08/typography-services.jpeg" /> </div>
+          <h1 class="xxl extra-vmargin">Beautiful typography meets Android</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue mauris sed lacus venenatis eget lobortis diam euismod. Mauris felis massa, pellentesque in posuere at, convallis vel ligula. Ut condimentum volutpat eros, sed sodales turpis rutrum quis.</p>
+          <p>Pellentesque faucibus, nunc nec interdum condimentum, tellus tortor lacinia nisi, at convallis turpis est viverra lacus. Proin nec purus ac urna vehicula tincidunt. Praesent ornare sapien id nibh imperdiet vel posuere neque interdum. Nunc quis dapibus sem.</p>
+          <h2 class="xl extra-vmargin">Nam eleifend felis id dolor consequat fringilla. </h2>
+          <p>Fusce et diam mauris, ut condimentum mi. Vestibulum a lectus commodo sapien aliquet consequat vel at nulla. Morbi eu lectus neque, et lobortis ante. Maecenas malesuada faucibus aliquam. Proin nec imperdiet quam. Morbi et libero massa, in luctus est. Integer arcu tellus, aliquam a condimentum nec, rhoncus ut lectus. Sed vulputate lacinia enim, imperdiet faucibus nulla dapibus nec.</p>
+        </div>
+  </div>
+    </div>
+<div id="example1" class="activity">
+      <header class="action-bar hololight">
+    <div class="button done"></div>
+    <div class="button back show close-zoom link" data-load="#transitions"></div>
+    <div class="app-icon"><img src="assets/universal/app-icon.png" /></div>
+    <h1 class="txt-medium">Title of the screen</h1>
+    <ul class="action-icons">
+          <li class="overflow"></li>
+        </ul>
+  </header>
+      <div class="content">
+    <div class="inner">
+          <div class="pic full-bleed-right full-bleed-top full-bleed-left"> <img src="http://sitesmacker.com/wp-content/uploads/2012/08/typography-services.jpeg" /> </div>
+          <h1 class="xxl extra-vmargin">Beautiful typography meets Android</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue mauris sed lacus venenatis eget lobortis diam euismod. Mauris felis massa, pellentesque in posuere at, convallis vel ligula. Ut condimentum volutpat eros, sed sodales turpis rutrum quis.</p>
+          <p>Pellentesque faucibus, nunc nec interdum condimentum, tellus tortor lacinia nisi, at convallis turpis est viverra lacus. Proin nec purus ac urna vehicula tincidunt. Praesent ornare sapien id nibh imperdiet vel posuere neque interdum. Nunc quis dapibus sem.</p>
+          <h2 class="xl extra-vmargin">Nam eleifend felis id dolor consequat fringilla. </h2>
+          <p>Fusce et diam mauris, ut condimentum mi. Vestibulum a lectus commodo sapien aliquet consequat vel at nulla. Morbi eu lectus neque, et lobortis ante. Maecenas malesuada faucibus aliquam. Proin nec imperdiet quam. Morbi et libero massa, in luctus est. Integer arcu tellus, aliquam a condimentum nec, rhoncus ut lectus. Sed vulputate lacinia enim, imperdiet faucibus nulla dapibus nec.</p>
+        </div>
+  </div>
+    </div>
+<div id="example2" class="activity">
+      <header class="action-bar hololight">
+    <div class="button done"></div>
+    <div class="button back show close-slide link" data-load="#transitions"></div>
+    <div class="app-icon"><img src="assets/universal/app-icon.png" /></div>
+    <h1 class="txt-medium">Title of the screen</h1>
+    <ul class="action-icons">
+          <li class="overflow"></li>
+        </ul>
+  </header>
+      <div class="content">
+    <div class="inner">
+          <div class="pic full-bleed-right full-bleed-top full-bleed-left"> <img src="http://sitesmacker.com/wp-content/uploads/2012/08/typography-services.jpeg" /> </div>
+          <h1 class="xxl extra-vmargin">Beautiful typography meets Android</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue mauris sed lacus venenatis eget lobortis diam euismod. Mauris felis massa, pellentesque in posuere at, convallis vel ligula. Ut condimentum volutpat eros, sed sodales turpis rutrum quis.</p>
+          <p>Pellentesque faucibus, nunc nec interdum condimentum, tellus tortor lacinia nisi, at convallis turpis est viverra lacus. Proin nec purus ac urna vehicula tincidunt. Praesent ornare sapien id nibh imperdiet vel posuere neque interdum. Nunc quis dapibus sem.</p>
+          <h2 class="xl extra-vmargin">Nam eleifend felis id dolor consequat fringilla. </h2>
+          <p>Fusce et diam mauris, ut condimentum mi. Vestibulum a lectus commodo sapien aliquet consequat vel at nulla. Morbi eu lectus neque, et lobortis ante. Maecenas malesuada faucibus aliquam. Proin nec imperdiet quam. Morbi et libero massa, in luctus est. Integer arcu tellus, aliquam a condimentum nec, rhoncus ut lectus. Sed vulputate lacinia enim, imperdiet faucibus nulla dapibus nec.</p>
+        </div>
+  </div>
+    </div>
+<div id="example3" class="activity">
+      <header class="action-bar hololight">
+    <div class="button done"></div>
+    <div class="button back show close-slide3d link" data-load="#transitions"></div>
+    <div class="app-icon"><img src="assets/universal/app-icon.png" /></div>
+    <h1 class="txt-medium">Title of the screen</h1>
+    <ul class="action-icons">
+          <li class="overflow"></li>
+        </ul>
+  </header>
+      <div class="content">
+    <div class="inner">
+          <div class="pic full-bleed-right full-bleed-top full-bleed-left"> <img src="http://sitesmacker.com/wp-content/uploads/2012/08/typography-services.jpeg" /> </div>
+          <h1 class="xxl extra-vmargin">Beautiful typography meets Android</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue mauris sed lacus venenatis eget lobortis diam euismod. Mauris felis massa, pellentesque in posuere at, convallis vel ligula. Ut condimentum volutpat eros, sed sodales turpis rutrum quis.</p>
+          <p>Pellentesque faucibus, nunc nec interdum condimentum, tellus tortor lacinia nisi, at convallis turpis est viverra lacus. Proin nec purus ac urna vehicula tincidunt. Praesent ornare sapien id nibh imperdiet vel posuere neque interdum. Nunc quis dapibus sem.</p>
+          <h2 class="xl extra-vmargin">Nam eleifend felis id dolor consequat fringilla. </h2>
+          <p>Fusce et diam mauris, ut condimentum mi. Vestibulum a lectus commodo sapien aliquet consequat vel at nulla. Morbi eu lectus neque, et lobortis ante. Maecenas malesuada faucibus aliquam. Proin nec imperdiet quam. Morbi et libero massa, in luctus est. Integer arcu tellus, aliquam a condimentum nec, rhoncus ut lectus. Sed vulputate lacinia enim, imperdiet faucibus nulla dapibus nec.</p>
+        </div>
+  </div>
+    </div>
+<div class="overlay"></div>
+<div id="nav">
+      <div class="profile"> <img src="assets/images/fabio.jpg" style="float: left; "/>
+    <p class="user">Fabio Sasso</p>
+    <p class="email aux">fsasso@google.com</p>
+  </div>
+      <ul>
+    <li class="n1 selected cat" data-load="#home">Home</li>
+    <li class="n2" data-load="#typography">Typography</li>
+    <li class="n3" data-load="#forms">Forms & Buttons</li>
+    <li class="n4" data-load="#cards">Cards</li>
+    <li class="n5" data-load="#lists">List styles</li>
+    <li class="header">Effects</li>
+    <li class="n6" data-load="#transitions">Transitions</li>
+    <li class="n7" data-load="#popups">Popups & Coachmark</li>
+    <li class="n8" data-load="#loaders">Loaders & Progress bar</li>
+  </ul>
+    </div>
+<div id="pop1" class="popup hololight">
+      <h1>Terms of Service</h1>
+      <div class="scroll">
+    <p>I authorize Google Wallet to charge my selected card when I make a purchase. I agree to the <a class="fake-link">Google Wallet Terms of Service and Privacy Notice</a>. I also agree to the <a class="fake-link">Virtual and Plastic Card Terms. Learn More</a></p>
+  </div>
+      <div class="buttons"> <a class="left">Cancel</a> <a class="right link zoom" data-load="#pin1">Accept</a> </div>
+    </div>
+<div id="pop2" class="popup holodark">
+      <h1>Terms of Service</h1>
+      <div class="scroll">
+    <p>I authorize Google Wallet to charge my selected card when I make a purchase. I agree to the <a class="fake-link">Google Wallet Terms of Service and Privacy Notice</a>. I also agree to the <a class="fake-link">Virtual and Plastic Card Terms. Learn More</a></p>
+  </div>
+      <div class="buttons"> <a class="left">Cancel</a> <a class="right link zoom" data-load="#pin1">Accept</a> </div>
+    </div>
+<div id="coach1" class="coachmark" style="background-position:-380px -490px;">
+      <div style="margin: 330px 16px auto 16px;text-align:left; text-shadow: 0 1px 0 rgba(0,0,0,.8);">
+    <h1 style="color: #00B2EB;">Beautiful Popups</h1>
+    <p style="color: #fff;">You can choose between dark and light themes.</p>
+  </div>
+      <div class="button close" style="right: 16px; width: 110px;  position: absolute; bottom: 16px"><a style="background: #00B2EB; color: #fff;">Close</a></div>
+    </div>
+</body>
+</html>
